@@ -1652,6 +1652,8 @@ int TWPartitionManager::Decrypt_Device(string Password) {
 	} else {
 		Post_Decrypt(crypto_blkdev);
 	}
+
+	DataManager::SetValue("tw_page_done", 1);
 	return 0;
 #else
 	gui_err("no_crypto_support=No crypto support was compiled into this build.");
