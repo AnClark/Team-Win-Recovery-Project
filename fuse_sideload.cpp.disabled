@@ -80,6 +80,13 @@
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 #endif
 
+
+/** ANCLARK MODIFY AT 2017-03-31 *****
+	Deal with the file-not-found error of sha.h
+**************************************/
+#define USE_MINCRYPT
+
+
 struct fuse_data {
     int ffd;   // file descriptor for the fuse socket
 
